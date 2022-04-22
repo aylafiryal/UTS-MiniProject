@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">uts-restoran</string>
+    <string name="menuMakanan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas massa nibh, ut pharetra dui sagittis aliquam. Integer semper eleifend hendrerit. Aliquam bibendum metus at diam dictum efficitur. Curabitur condimentum, nunc suscipit rutrum pellentesque, ipsum eros lobortis arcu, in vulputate ipsum est ac massa.</string>
+    <string name="biayaMinimal">Biaya minimal pemesanan: </string>
+    <string name="biayaKirim">Biaya pengiriman: </string>
+    <string name="waktuKirim">Waktu pengiriman: </string>
+    <string name="jarakResto">Jarak restoran: </string>
+</resources>

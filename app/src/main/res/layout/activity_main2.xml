@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/headerMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/makanan1"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/tombolBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:scaleType="centerInside"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="ContentDescription">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaRestoran2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Restoran"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_below="@id/headerMakanan"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/favorit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/favourite"
+            android:layout_below="@id/headerMakanan"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            tools:ignore="ContentDescription">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jumlah_favorit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/favorit"
+            android:layout_marginEnd="26dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sharing"
+            android:layout_below="@id/headerMakanan"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="65dp"
+            android:layout_marginTop="15dp"
+            tools:ignore="ContentDescription">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/bintang"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/star"
+            android:layout_below="@id/namaRestoran2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="ContentDescription">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/rating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rating"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/namaRestoran2"
+            android:layout_toEndOf="@id/bintang"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/biayaminimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biayaMinimal"
+            android:layout_below="@id/bintang"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/biayakirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biayaKirim"
+            android:layout_below="@id/bintang"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="90dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/waktukirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waktuKirim"
+            android:layout_below="@id/bintang"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/jarakresto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jarakResto"
+            android:layout_below="@id/bintang"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="170dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/biaya_minimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bintang"
+            android:text="biaya_minimal"
+            android:layout_toEndOf="@id/biayaminimal"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/biaya_kirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bintang"
+            android:text="biaya_kirim"
+            android:layout_toEndOf="@id/biayakirim"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/waktu_kirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bintang"
+            android:text="waktu_kirim"
+            android:layout_toEndOf="@id/biayakirim"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/jarak_Resto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bintang"
+            android:text="jarak_Resto"
+            android:layout_toEndOf="@id/biayakirim"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/nilai_restoran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai restoran ini!"
+            android:textSize="25sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="145dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5"
+                    android:stepSize="1">
+                </RatingBar>
+
+                <Button
+                    android:id="@+id/tombol_konfirmasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:text="Konfirmasi"
+                    tools:ignore="HardcodedText">
+                </Button>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
