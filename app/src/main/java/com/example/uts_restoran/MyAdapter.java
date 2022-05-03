@@ -16,10 +16,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     private List<Restoran> listResto;
     private Context context;
+    private clickListener clickListener1;
 
-    public MyAdapter(List<Restoran> listResto, Context context) {
+    public MyAdapter(List<Restoran> listResto, Context context, clickListener clickListener) {
         this.listResto = listResto;
         this.context = context;
+        this.clickListener1 = clickListener;
     }
 
     @NonNull
@@ -27,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
-        return new ViewHolder(v);
+        return new ViewHolder(v, clickListener1);
     }
 
     @Override
@@ -47,12 +49,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
         return listResto.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public TextView namaRestoran, rating, jumlahPenilai, biayaAntar, jarakWaktu;
+        public TextView namaRestoran, rating, jumlahPenilai, biayaAntar, jarakWaktu, menuMakanan;
         public ImageView fotoMakanan;
+        public clickListener clickListener;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, clickListener clickListener) {
             super(itemView);
 
             namaRestoran = (TextView) itemView.findViewById(R.id.namaRestoran);
@@ -61,6 +64,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
             jarakWaktu = (TextView) itemView.findViewById(R.id.jarakWaktu);
             biayaAntar = (TextView) itemView.findViewById(R.id.biayaAntar);
             fotoMakanan = (ImageView) itemView.findViewById(R.id.fotoMakanan);
+            menuMakanan = (TextView) itemView.findViewById(R.id.menuMakanan);
+
+            this.clickListener = clickListener;
+            menuMakanan.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            clickListener.klik(getAdapterPosition());
         }
     }
+
+    public interface clickListener{
+        void klik(int position);
+    }
 }
+
