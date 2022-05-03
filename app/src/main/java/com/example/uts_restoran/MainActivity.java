@@ -3,18 +3,14 @@ package com.example.uts_restoran;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.View.OnClickListener;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyAdapter.clickListener{
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -43,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         listResto.add(new Restoran("Cheesecake Factory", "3 km (10 menit)", "3.000", "1", "5", R.drawable.makanan9));
         listResto.add(new Restoran("Olive Garden", "3 km (10 menit)", "3.000", "1", "5", R.drawable.makanan2));
 
-        adapter = new MyAdapter(listResto, this);
+        adapter = new MyAdapter(listResto, this, this);
         recyclerView.setAdapter(adapter);
 
-        TextView txt = (TextView)  findViewById(R.id.daftarRestoran);
+        /*TextView txt = (TextView)  findViewById(R.id.daftarRestoran);
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /*View inflatedView = getLayoutInflater().inflate(R.layout.list_item, null);
+        View inflatedView = getLayoutInflater().inflate(R.layout.list_item, null);
         TextView txt = (TextView) inflatedView.findViewById(R.id.menuMakanan);
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +62,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
+
+        /*ConstraintLayout container = (ConstraintLayout) findViewById(R.id.main_layout);
+        RecyclerView container = (RecyclerView) findViewById(R.id.recyclerview);
+
+        View view = View.inflate(this, R.layout.list_item, container);
+
+        TextView txt = (TextView) view.findViewById(R.id.menuMakanan);
+        txt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });*/
+    }
+
+    @Override
+    public void klik(int position) {
+        /*listResto.get(position);*/
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 }
